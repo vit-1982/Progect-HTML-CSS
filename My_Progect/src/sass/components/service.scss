@@ -1,0 +1,233 @@
+.service {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-image: url(../../images/wave.png);
+  background-position-y: 460px;  
+  
+  @media (min-width:768px) {
+    background-image: url(../../images/bg.png);
+    background-position-y: 200px;
+  }
+  
+  @media (min-width:1280px) {
+    background-position-y: 300px;  
+  }
+  
+  @media (min-width:1680px) {
+    background-position-y: 260px;      
+  }
+}
+
+.service-container {
+  @extend %container;
+  display: flex;
+  align-items: center;  
+  
+  @media (max-width:767px) {
+    flex-direction: column;
+    margin-bottom: 90px;
+  }  
+
+  @media (min-width:768px) {
+    justify-content: space-between;
+    margin-bottom: 120px;  
+  }
+
+  @media (min-width:1280px) {
+    margin-bottom: 130px;  
+  }
+
+  @media (min-width:1680px) {
+    margin-bottom: 110px;  
+  }
+}
+
+.service-menu {
+  @extend %container;
+}
+
+.service-content {
+  width: 285px;
+
+  @media (min-width:768px) {
+    padding: 0;
+    width: 270px;  
+  } 
+  
+  @media (min-width:1280px) {
+    width: 500px;  
+  } 
+
+  @media (min-width:1680px) {
+    width: 665px;  
+  }
+}
+
+.service__title {
+  @extend %title;
+  color: $main-title-color;
+  margin-bottom: 25px;
+
+  @media (min-width:768px) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width:1280px) {
+    @include font($size:48px, $weight:800, $height:58px, $space:0.3px);
+    margin-bottom: 27px;
+  }
+
+  @media (min-width:1680px) {
+    @include font($size:58px, $weight:800, $height:76px, $space:0.3px);
+    margin-bottom: 27px;
+  }
+}
+
+.service__text {
+  @include font($size:15px);
+  margin-bottom: 36px;
+
+  @media (min-width:1280px) {
+    @include font($size:18px, $height:26px);
+    margin-bottom: 62px;
+  }
+}
+
+.service-img {
+  width: 220px;  
+
+  @media (min-width:768px) {
+    width: 400px;  
+  }
+
+  @media (min-width:1280px) {
+    min-width: 500px;  
+    max-width: 685px;  
+  }
+
+  @media (min-width:1280px) {
+    min-width: 685px;  
+    max-width: 840px;  
+  }
+}
+
+.service-menu {
+  @extend %list;
+  flex-direction: column;
+  align-items: center;;
+  margin-bottom: 50px;
+  
+  @media (min-width:768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width:1280px) {
+    flex-wrap: nowrap;
+    margin-bottom: 86px;
+  }
+
+  @media (min-width:1680px) {
+    margin-bottom: 130px;
+  }
+
+  &__item {
+    @extend %text;
+    width: 200px;
+
+    @media (min-width:1280px) {
+      width: auto;
+    }
+  }
+
+  &__link {
+    @extend %link;
+    color: $main-title-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--box {
+      width: 58px;
+      height: 58px;
+      border-left: 2px solid $secondary-color;
+      border-top: 2px solid $secondary-color;
+      border-bottom: 2px solid $secondary-color;
+      position: relative;
+      @include bg-img ($size:initial);
+
+      @media (min-width:1280px) {
+        min-width: 103px;
+        height: 103px;
+      }
+
+      & .service__icon {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: $secondary-color;
+
+        @media (min-width:1280px) {
+          width: 45px;
+          height: 45px;
+          left: 45%;
+        }
+      }  
+
+      &::before {
+        content: '';
+        width: 2px;
+        height: 11px;
+        background: $secondary-color;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @media (min-width:1280px) {
+          height: 15px;
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 2px;
+        height: 11px;
+        background: $secondary-color;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        @media (min-width:1280px) {
+          height: 15px;
+        }
+
+      }
+    }
+    
+    &--text {
+      width: 130px;
+
+      @media (min-width:1280px) {
+        min-width: 280px;
+        position: relative;
+        left: -19px;
+      }
+
+      @media (min-width:1680px) {
+        width: 340px;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 25px;
+
+    @media (min-width:768px) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+%container {
+  width: 320px;
+  // max-width: 1680px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width:768px) {
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width:1280px) {
+    width: 1280px;
+    padding: 0 35px;
+  }
+
+  @media (min-width:1680px) {
+    width: 1680px;
+    padding: 0 156px 0 182px;
+  }
+}
+
+%list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+%title {
+  @include font($size:20px, $weight:800, $height:29px, $space:0.3px);
+
+  @media (min-width:768px) {
+    @include font($size:26px, $weight:800, $height:33px, $space:0.5px);
+  }
+
+  @media (min-width:1280px) {
+    @include font($size:42px, $weight:800, $height:58px, $space:0.5px);
+  }
+
+  @media (min-width:1680px) {
+    @include font($size:46px, $weight:800, $height:63px, $space:0.5px);
+  }
+}
+
+%text {
+  @include font();
+
+  @media (min-width:1280px) {
+    @include font($size:18px, $height:29px);
+  }
+
+  @media (min-width:1680px) {
+    @include font($size:21px, $height:29px);
+  }
+}
+
+%line {
+  width: 25px;
+  height: 2px;
+  background: $secondary-color;
+}

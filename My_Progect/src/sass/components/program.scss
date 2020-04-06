@@ -1,0 +1,235 @@
+.program {
+  background: $bg-color;
+  height: 1590px;
+  padding-top: 45px;
+  position: relative;
+  
+  @media (min-width:768px) {
+    height: 1080px;
+  }
+  
+  @media (min-width:1280px) {
+    padding-top: 54px;
+    height: 960px;
+    
+    &::before {
+      content: '';
+      width: 100%;
+      border-top: 2px solid #546264;
+      position: absolute;
+      top: 159px;
+
+      @media (min-width:1680px) {
+        top: 276px;
+      }
+    }
+  }
+
+  @media (min-width:1680px) {
+    padding-top: 121px;
+    height: 1165px;
+  }
+}
+
+.program-img-wrapper {
+  @extend %container;  
+  position: relative;
+}
+
+.program-img {
+  position: absolute;
+  right: 0;
+  bottom: -90px;
+  
+  @media (max-width:767px) {
+    width: 144px;
+    height: 170px;    
+  } 
+  
+  @media (min-width:768px) {
+    width: 391px;
+    height: 281px;    
+  }
+  
+  @media (min-width:1280px) {
+    width: 545px;
+    height: 395px; 
+    left: 0;
+    bottom: -170px;   
+  }
+
+  @media (min-width:1680px) {
+    width: 700px;
+    height: 485px; 
+    left: 0;
+    bottom: -280px;   
+  }
+}
+
+.program-title {
+  @extend %title;
+  color: $second-title-color;
+  margin-bottom: 40px;
+
+  @media (max-width:767px) {
+    text-align: center;
+  }
+
+  @media (min-width:1680px) {
+    margin-bottom: 85px;
+  }
+}
+
+.program-list {
+  @extend %list;
+  width: 182px;
+  margin: 0 auto;
+  counter-reset: section;
+  position: relative;
+
+  @media (min-width:768px) {
+    width: 510px;
+    left: 0;
+  }
+
+  @media (min-width:1280px) {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding-left: 30px;
+    position: relative;
+
+    @media (min-width:768px) {
+      padding-left: 50px;
+    }
+
+    @media (min-width:1280px) {
+      padding-left: 0;
+      padding-top: 40px;
+    }
+
+    @media (min-width:1680px) {
+      padding-top: 70px;
+    }
+
+    &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+
+      @media (min-width:1280px) {
+        width: 17px;
+        height: 17px;
+        top: 0px;
+        left: 0;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    border-left: 2px solid #546264;
+
+    @media (min-width:1280px) {
+      border-left: 0;
+    }
+  }
+
+  &__border-box {
+    position: relative;
+    top: -15px;
+    margin-bottom: 17px;
+
+    @media (min-width:1280px) {
+      position: static;
+    }
+  }
+
+  &__item-title {
+    @include font($size:15px, $height:29px, $space:1.1px);
+    color: $second-title-color;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media (min-width:1280px) {
+      @include font($size:19px, $height:29px, $space:1.1px);
+      margin-bottom: 40px;
+    }
+
+    &::before {
+      counter-increment: section;
+      content: counter(section) " ";
+    }
+  }
+
+  &__item-class {
+    @extend %list;
+    flex-direction: column;
+    width: 152px;
+    margin-right: 25px;
+
+    @media (min-width:1280px) {
+      width: 230px;
+      margin-right: 35px;
+    }
+
+    @media (min-width:1680px) {
+      width: 250px;
+      margin-right: 50px;
+    }
+
+    &--name {
+      padding-left: 36px;
+      color: $secondary-color;
+      @include font($weight:500, $height:1);
+      position: relative;
+      margin-bottom: 17px;
+
+      @media (min-width:1280px) {
+        @include font($size:18px, $weight:500, $height:1);
+      }
+
+      &::before {
+        content: '';
+        @extend %line;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--descr {
+      @include font($size:11px, $weight:400);
+
+      @media (min-width:1280px) {
+        @include font($size:19px, $weight:400, $height:29px);
+      }
+
+      &:last-child {
+        margin-bottom: 14px;
+
+        @media (min-width:1280px) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__item-content {
+    @media (min-width:768px) {
+      display: flex;
+    }
+
+    @media (min-width:1280px) {
+      display: block;
+    }
+  }
+}

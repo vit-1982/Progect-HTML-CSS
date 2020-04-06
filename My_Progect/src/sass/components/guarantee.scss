@@ -1,0 +1,97 @@
+.guarantee {
+  color: $main-title-color;
+}
+
+.guarantee-title {
+  @extend %container;
+  @extend %title;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width:1280px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width:1280px) {
+    margin-bottom: 35px;
+  }
+}
+
+.guarantee-wrapper {
+  padding-top: 24px;
+
+  @media (max-width:767px) {
+    background-color: #f1f1f1;
+  }
+}
+
+.guarantee-list-container {
+  @extend %container;
+}
+
+.guarantee-list-box {
+  @media (min-width:768px) {
+    background-color: #f1f1f1;
+    padding: 35px 50px 15px 67px;
+  }
+
+  @media (min-width:1280px) {
+    background-color: #f1f1f1;
+    padding: 48px 135px 20px 125px;
+  }
+
+  @media (min-width:1680px) {
+    background-color: #f1f1f1;
+    padding: 63px 145px 28px 100px;
+  }
+}
+
+.guarantee-list {
+  @extend %list;
+  @include font($size:11px, $weight:500);
+  position: relative;
+
+  @media (min-width:1280px) {
+    @include font($size:18px, $weight:500, $height:29px);
+  }
+
+  @media (min-width:1680px) {
+    @include font($size:21px, $weight:500, $height:29px);
+  }
+
+  &-item {
+    padding-left: 36px;
+
+    @media (min-width:768px) {
+      padding-left: 47px;
+    }
+
+    &::before {
+      content: '';
+      width: 13px;
+      height: 18px;
+      @include bg-img();
+      background-image: url(../images/icons/fire.svg);
+      position: absolute;
+      left: -5px;
+
+      @media (min-width:1280px) {
+        width: 20px;
+        height: 27px;
+        left: -10px;
+      }
+    }
+
+    &:not(:last-child) {
+      border-left: 1px dashed #bcbcbc;
+    }
+  }
+
+  &__border-box {
+    margin-bottom: 17px;
+
+    @media (min-width:1280px) {
+      margin-bottom: 24px;
+    }
+  }
+}

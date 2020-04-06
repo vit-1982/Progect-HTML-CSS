@@ -1,0 +1,62 @@
+.btn {
+  display: block;
+  @include font($secondary-font, 11px, 700, 1);
+  background: $secondary-color;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  border: 2px solid $secondary-color;
+  margin: 0 auto;
+  outline: none;
+  
+  &__link {
+    @extend %link;
+    color: #fff;
+    padding: 18px 12px;
+
+    @media (min-width:1280px) {
+      padding: 27px 37px;
+    }
+
+    @media (min-width:1680px) {
+      padding: 30px 20px;
+    }    
+  }
+
+  @media (min-width:1280px) {
+    @include font($secondary-font, 12px, 700, 1, 1.1);
+  }
+
+  @media (min-width:1680px) {
+    @include font($secondary-font, 14px, 700, 1, 1.1);
+  }
+}
+
+.nav-btn {
+  background: transparent;
+  margin-bottom: 0;
+  
+  &__link {
+    color: $secondary-color; 
+  }
+
+  @media (max-width:767px) {
+    display: none;    
+  }
+  
+  @media (min-width:768px) {
+    margin-right: 45px;
+  }
+  
+  @media (min-width:1280px) {
+    margin-right: 0;
+  }
+
+}
+
+.service-btn {
+  margin-bottom: 35px;
+  
+  @media (min-width:768px) {
+    margin: 0;    
+  }
+}

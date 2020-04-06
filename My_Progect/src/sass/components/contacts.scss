@@ -1,0 +1,80 @@
+.contacts-wrapper {
+  @extend %container;
+}
+
+.contacts-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 181px;
+  padding: 36px 0 15px;
+  justify-content: space-between;
+
+  @media (min-width:768px) {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: 120px;
+    padding: 0;
+  }
+
+  @media (min-width:1280px) {
+    height: 145px;
+  }
+}
+
+.contacts-link {
+  @extend %link;
+  @include font($size:18px, $weight:600);
+  color: $main-title-color;
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    @include bg-img();
+    background-image: url(../images/icons/phone.svg#phone);
+    fill: $secondary-color;
+    position: absolute;
+    left: 0;
+
+    @media (min-width:1280px) {
+      width: 32px;
+      height: 31px;
+      top: -6px;
+    }
+  }
+
+  @media (min-width:768px) {
+    margin-right: 61px;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 29px;
+      background-color: #e0e0e0;
+      position: absolute;
+      right: -30px;
+      top: -4px;
+    }
+  }
+
+  @media (min-width:1280px) {
+    @include font($size:27px, $weight:600);
+    padding-left: 52px;
+  }
+}
+
+.contacts-icon {
+  width: 37px;
+  height: 37px;
+}
+
+.bottom-logo {
+  @media (min-width:768px) {
+    position: absolute;
+    left: 0;
+  }
+}

@@ -1,0 +1,120 @@
+.reg {
+  background-image: url(../images/form_bg.JPG);
+  @include bg-img();
+}
+
+.reg-wrapper {
+  background-color: rgba($color: $bg-color, $alpha: 0.8);
+}
+
+.reg-container {
+  @extend %container;
+  padding: 52px 0 58px;
+
+  @media (min-width:768px) {
+    padding: 54px 0 64px;
+  }
+
+  @media (min-width:1280px) {
+    padding: 78px 0 88px;
+  }
+
+  @media (min-width:1680px) {
+    padding: 120px 0 102px;
+  }
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $second-title-color;
+
+  &__title {
+    @include font($size:14px, $weight:800, $height:26px);
+    width: 240px;
+    margin-bottom: 15px;
+
+    @media (min-width:768px) {
+      @include font($size:22px, $weight:800, $height:38px);
+      width: 550px;
+      margin-bottom: 22px;
+    }
+
+    @media (min-width:1280px) {
+      @include font($size:38px, $weight:800, $height:50px);
+      width: 930px;
+      margin-bottom: 38px;
+    }
+  }
+
+  &__info {
+    @include font($size:11px, $weight:600);
+    width: 257px;
+    margin-bottom: 24px;
+
+    @media (min-width:768px) {
+      @include font($size:15px);
+      width: 460px;
+      margin-bottom: 38px;
+
+      & .newrow {
+        display: inline-block;
+      }
+    }
+
+    @media (min-width:1280px) {
+      @include font($size:18px, $weight:600, $height:25px);
+      width: 548px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__input {
+    display: block;
+    background: transparent;
+    @include font($weight:600, $height:1);
+    color: $second-title-color;
+    border: 1px solid $second-title-color;
+    width: 280px;
+    padding: 17px 20px;
+
+    @media (min-width:768px) {
+      width: 400px;
+      padding: 20px 22px;
+    }
+
+    @media (min-width:1280px) {
+      @include font($size:21px, $weight:600, $height:1);
+      width: 620px;
+      padding: 27px 27px;
+    }
+
+    &::placeholder {
+      color: $second-title-color;
+      text-transform: capitalize;
+      ;
+    }
+
+    &--name {
+      margin-bottom: 20px;
+
+      @media (min-width:1280px) {
+        margin-bottom: 28px;
+      }
+    }
+
+    &--phone {
+      margin-bottom: 55px;
+
+      @media (min-width:768px) {
+        margin-bottom: 48px;
+      }
+
+      @media (min-width:1280px) {
+        margin-bottom: 57px;
+      }
+    }
+  }
+}

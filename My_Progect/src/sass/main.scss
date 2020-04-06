@@ -1,0 +1,24 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'helpers/variables.scss';
+@import 'helpers/mixins';
+@import 'helpers/placeholders';
+@import 'normalize';
+@import 'base';
+
+// COMPONENTS
+@import 'components/header';
+@import 'components/service';
+@import 'components/btn';
+@import 'components/problems';
+@import 'components/way';
+@import 'components/program';
+@import 'components/choice';
+@import 'components/teacher';
+@import 'components/guarantee';
+@import 'components/review';
+@import 'components/registration';
+@import 'components/contacts';
+@import 'components/footer';

@@ -1,0 +1,13 @@
+@mixin font($family:$main-font, $size:13px, $weight:700, $height:20px, $space:0.5px) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $space;
+}
+
+@mixin bg-img($size:cover, $repeat:no-repeat, $pos: center) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $pos; 
+}

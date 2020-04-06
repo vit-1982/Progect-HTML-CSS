@@ -1,0 +1,149 @@
+.choice {
+  background: #111517;
+  height: 304px;
+
+  @media (min-width:1680px) {
+    height: 60px;
+  }
+}
+
+.choice-wrapper {
+  @extend %container;
+}
+
+.choice-title {
+  @extend %title;
+  color: $second-title-color;
+  width: 140px;
+  margin-bottom: 16px;
+
+  @media (min-width:768px) {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width:768px) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width:768px) {
+    margin-bottom: 46px;
+  }
+}
+
+.choice-container {
+  position: relative;
+  top: -90px;
+  z-index: 5;
+
+  @media (min-width:768px) {
+    top: 60px;
+  }
+
+  @media (min-width:1280px) {
+    top: -138px;
+  }
+
+  @media (min-width:1680px) {
+    top: -230px;
+  }
+}
+
+.choice-box {
+  position: absolute;
+  padding: 47px 23px 30px 28px;
+  background: $second-title-color;
+  box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+  width: 100%;
+
+  @media (min-width:768px) {
+    padding: 55px 78px 30px 110px;
+  }
+
+  @media (min-width:1280px) {
+    padding: 55px 100px 52px 100px;
+  }
+
+  @media (min-width:1680px) {
+    padding: 80px 45px 80px 100px;
+  }
+}
+
+.choice-list {
+  @extend %list;
+  @extend %text;
+  justify-content: space-between;
+  color: $main-title-color;
+  counter-reset: section;
+  margin: 0 auto;
+
+  @media (max-width:767px) {
+    flex-direction: column;
+  }
+
+  @media (min-width:768px) {
+    max-width: 915px;
+
+    &__item:not(:nth-child(-n+3)) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width:1280px) {
+    max-width: 1115px;
+  }
+
+  @media (min-width:1680px) {
+    max-width: 1180px;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 19px;
+    margin-bottom: 17px;
+
+    &::before {
+      content: '';
+      @extend %line;
+      position: absolute;
+      top: 0px;
+      left: 0;
+    }
+
+    &::after {
+      @include font($size:14px, $weight:500, $height:29px);
+      counter-increment: section;
+      content: "0"counter(section);
+      color: $secondary-color;
+      position: absolute;
+      top: -14px;
+      left: 40px;
+
+      @media (min-width:1280px) {
+        @include font($size:21px, $weight:500, $height:29px);
+      }
+    }
+
+    @media (min-width:768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width:1279px) {
+      width: 230px;
+    }
+
+    @media (min-width:1280px) {
+      width: 300px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width:1680px) {
+      width: 345px;
+    }
+  }
+
+  &__item:last-child() {
+    margin-bottom: 0;
+  }
+}
