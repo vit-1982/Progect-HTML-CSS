@@ -109,7 +109,7 @@
   list-style: none;
 
   &-item {
-    padding: 0 28px 15px 28px;
+    padding: 0 28px 25px 28px;
 
     @media (min-width:768px) {
       display: flex;
@@ -196,33 +196,22 @@
       &--comment {
         @include font($size:11px, $weight:500);
         color: $main-title-color;
-        // position: relative;
 
-        // @media (max-width:767px) {
-        //   overflow: hidden;
-        //   height: 125px;
-        // }
+        @media (max-width:767px) {
+          overflow: hidden;
+          height: 125px;
+        }
 
         @media (min-width:1280px) {
           @include font($size:1rem, $weight:500, $height:29px);
         }
+      }
 
-        & .comment-link {
-          // position: absolute;
-          background: $second-title-color;
-          // right: 0px;
-          // bottom: 5px;
+      & .comment-link {
+        @include font($size:11px, $weight:500);
 
-          @media (min-width:768px) {
-            position: static;
-            // right: 0;
-            // bottom: 0;
-          }
-
-          // @media (min-width:1280px) {
-          //   right: 0px;
-          //   bottom: 1px;
-          // }
+        @media (min-width:1280px) {
+          @include font($size:1rem, $weight:500, $height:29px);
         }
       }
     }
