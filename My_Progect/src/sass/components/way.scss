@@ -64,7 +64,7 @@
     text-align: center;
     width: 290px;
     height: 268px;
-    padding-top: 30px;
+    padding: 30px 23px 0;
     transition: all 0.3s linear;
 
     @media (min-width:1280px) {
@@ -112,17 +112,17 @@
   &__text {
     @include font($size:11px, $weight:400);
     color: $main-text-color;
-    width: 240px;
+    // width: 240px;
     margin: 0 auto;
 
     @media (min-width:1280px) {
       @include font($size:15px, $weight:400, $height:31px);
-      width: 348px;
+      // width: 348px;
     }
 
     @media (min-width:1680px) {
       @include font($size:19px, $weight:400, $height:31px);
-      width: 330px;
+      // width: 330px;
     }
   }
 }

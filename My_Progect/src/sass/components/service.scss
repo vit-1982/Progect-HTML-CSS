@@ -48,11 +48,10 @@
 }
 
 .service-content {
-  width: 285px;
 
   @media (min-width:768px) {
     padding: 0;
-    width: 270px;  
+    width: 285px;  
   } 
   
   @media (min-width:1280px) {
